@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cuaca</title>
+</head>
+<body>
+    <div>
+        <h2>cek cuaca</h2>
+        <input type="text" placeholder="masukkan suhu cuaca" id="cuaca">
+        <button onclick="cekCuaca()" >Submit</button>
+    </div>
+
+    <div id="cuss"></div>
+
+<script>
+
+    function cekCuaca(){
+        const cuaca = parseInt(document.getElementById("cuaca").value);
+        const hasil = document.getElementById("cuss");
+
+        if( isNaN(cuaca)){
+            hasil.innerHTML = "masukkan angka";
+            hasil.style.color = "red";
+        }
+
+       let predikat = "";
+       let warna = "";
+
+
+
+       if (cuaca > 30){
+        predikat = "panas";
+        warna = "red";
+       }else if (cuaca > 20){
+        predikat = "normal";
+        warna = "green";
+       }else{
+        predikat = "dingin";
+        warna = "blue";
+       }
+
+       hasil.innerHTML = ` cuaca hari ini: <strong>${cuaca}</strong> derajat celcius ${predikat}`
+       hasil.style.color = warna;
+    }
+
+
+</script>
+    
+</body>
+</html>

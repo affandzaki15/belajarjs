@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body id="body">
+
+    <div class="bg-white p-2 justify-center items-center h-screen">
+        <h1>Event Angka</h1>
+        <p id="counter">0</p>
+        <div class="flex items-center">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded gap-2"
+                id="increment">+</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded gap-2"
+                id="decrement">-</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded gap-2"
+                id="reset">reset</button>
+        </div>
+    </div>
+
+    <!-- Latsol 1 bg warna -->
+        <button id="warna" class="bg-green-500 hover:bg-green-700 text-white font-bold  rounded">change the
+            Background</button>
+        <button id="reset-warna" class="bg-green-500 hover:bg-green-700 text-white font-bold rounded">Reset
+            Background</button>
+  
+            <div>
+                <label>Nama</label>
+                <input type="text" id="name">
+                <button id="tampilkan">Tampilkan</button>
+                <p id="output"></p>
+            </div>
+
+    <script src="event.js"></script>
+</body>
+
+</html>

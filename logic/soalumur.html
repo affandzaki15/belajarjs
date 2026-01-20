@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umur</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="Umur" placeholder="masukkan umur">
+        <button onclick="cekUmur()" >Submit</button>
+    </div>
+    <p id="hasil"></p>
+
+<script>
+    function cekUmur(){
+
+        const umur = parseInt(document.getElementById("Umur").value);
+        const hasil = document.getElementById("hasil");
+    
+        if(umur < 0 || isNaN(umur)){
+            alert("masukkan angka");
+        }
+
+        if(umur <13){
+            hasil.innerHTML = "anda masih anak anak";
+            hasil.style.color = "green";
+        }else if (umur <18) {
+            hasil.innerHTML = "anda sudah remaja";
+              hasil.style.color = "yellow";
+        } else {
+            hasil.innerHTML = "anda sudah dewasa";
+              hasil.style.color = "red";
+        }
+    }
+</script>
+</body>
+</html>

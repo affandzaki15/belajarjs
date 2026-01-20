@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cek Predikat Nilai (Versi Tabel)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f8fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: white;
+      padding: 25px 35px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 400px;
+      text-align: center;
+    }
+    input {
+      width: 80%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Cek Predikat Nilai</h2>
+    <input type="number" id="nilai" placeholder="Masukkan nilai (0-100)">
+    <br>
+    <button onclick="cekPredikat()">Cek</button>
+
+    <table id="tabelHasil">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nilai</th>
+          <th>Predikat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- hasil akan muncul di sini -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    let nomor = 1;
+
+    function cekPredikat() {
+      const nilai = parseInt(document.getElementById('nilai').value);
+      const tbody = document.querySelector('#tabelHasil tbody');
+
+      // validasi input
+      if (isNaN(nilai) || nilai < 0 || nilai > 100) {
+        alert("⚠️ Masukkan nilai yang valid antara 0 - 100!");
+        return;
+      }
+
+      // tentukan predikat
+      let predikat = "";
+      if (nilai >= 90) predikat = "A (Sangat Baik) 🏆";
+      else if (nilai >= 80) predikat = "B (Baik) 😊";
+      else if (nilai >= 70) predikat = "C (Cukup) 😐";
+      else if (nilai >= 60) predikat = "D (Kurang) 😕";
+      else predikat = "E (Gagal) 😭";
+
+      // buat baris baru di tabel
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${nomor}</td>
+        <td>${nilai}</td>
+        <td>${predikat}</td>
+      `;
+      tbody.appendChild(row);
+      nomor++;
+
+      // kosongkan input
+      document.getElementById('nilai').value = "";
+    }
+  </script>
+
+</body>
+</html>

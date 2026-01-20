@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <h1> Message-Us</h1>
+        <div class="wrapper">
+            <form id="form" class="form">
+                <div class="row">
+                    <label>Nama <span>:</span></label>
+                    <input type="text" placeholder="Nama" id="nama">
+                </div>
+                <div class="row">
+                    <label>Tanggal Lahir <span>:</span></label>
+                    <input type="date" id="date">
+                </div>
+                <div class="row">
+                    <div class="gender">
+                        <label>Jenis Kelamin <span>:</span></label>
+                        <input type="radio" name="gender" value="Laki-Laki">Laki-Laki
+                        <input type="radio" name="gender" value="Perempuan">Perempuan
+                    </div>
+                </div>
+                <div class="row">
+                    <label>Pesan <span>:</span></label>
+                    <textarea placeholder="Pesan" id="message"></textarea>
+                </div>
+                <button type="submit" class="btn">submit</button>
+            </form>
+            <div class="result">
+                <p ><b>Current Time:</b> <span id="time"></span></p>
+                <p ><b>Nama: </b> <span id="result-nama"></span></p>
+                <p ><b>Tanggal Lahir:</b> <span id="result-date"></span></p>
+                <p ><b>Jenis Kelamin: </b> <span id="result-gender"></span></p>
+                <p ><b>Pesan: </b> <span id="result-pesan"></span></p>
+            
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

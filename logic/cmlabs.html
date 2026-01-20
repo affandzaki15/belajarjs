@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+   
+    div{
+        display: flex;
+        flex-direction: column;
+        padding: 10px
+    }
+    div input{
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+   .submit{
+        display: block;
+        margin: 10px auto;
+        background-color: blue;
+        border: none;
+        padding: 5px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+
+   }
+
+   #hasil{
+
+    font-weight: bold;
+   }
+</style>
+<body>
+    <div>
+        <input type="text" id="firstname" placeholder="firstname">
+        <input type="text" id="lastname" placeholder="lastname">
+        <input type="text" id="phone" placeholder="PhoneNumber">
+        <textarea id="address" placeholder="Address" cols="30" rows="10"></textarea>
+    </div>
+    <button class="submit" onclick="cek()" >Submit</button>
+
+    <div id="hasil"></div>
+
+
+
+<script>
+    function cek(){
+        const firstname = document.getElementById("firstname").value;
+        const lastname = document.getElementById("lastname").value;
+        const phone = document.getElementById("phone").value;
+        const address = document.getElementById("address").value;
+        const hasil = document.getElementById("hasil");
+        hasil.innerHTML = `Hi, my name is ${firstname} ${lastname} <br> Phone Number: ${phone} <br> address: ${address}`
+        hasil.style.color = "black";
+
+
+    }
+</script>
+</body>
+</html>

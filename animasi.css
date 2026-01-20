@@ -1,0 +1,84 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.text {
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes gerakKanan {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(200px) skewX(45deg);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.kotak {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: gerakKanan 4s infinite;
+    gap: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.kotak:hover {
+    animation-play-state: paused;
+}
+
+@keyframes bolaKuy {
+    0%. 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-200px);
+    }
+}
+
+.bola {
+    animation: bolaKuy 4s infinite;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+        
+    }
+}
+
+.button {
+    width: 100px;
+    color: white;
+    background-color: black;
+   animation:none;
+}
+
+.button:hover {
+ animation: pulse 1s ease forwards;
+    color: black;
+    background-color: white;
+}

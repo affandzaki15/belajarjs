@@ -1,0 +1,59 @@
+/* Reset bawaan */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar utama */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* kiri profile, kanan menu */
+  align-items: center;
+  padding: 15px 30px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow bawah */
+}
+
+/* Bagian profile (gambar + teks) */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* bulat */
+  object-fit: cover;
+}
+
+/* Teks dalam column */
+.profile-text {
+  display: flex;
+  flex-direction: column; /* h4 & p jadi kolom */
+  line-height: 1.2;
+}
+
+.profile-text h4 {
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.profile-text p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Menu kanan */
+.menu a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: #007BFF; /* efek hover */
+}

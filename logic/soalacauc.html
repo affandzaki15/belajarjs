@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuaca 2</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="border-2 p-2 m-2">
+        <h1 class="pb-2 text-center"> Cek Cuaca Dulu Bosque</h1>
+        <label class="m-3">Masukkan Suhu: <input class="border" type="text" id="cuaca"></label>
+        <button class="bg-blue-400" onclick="cekCuaca()">Submit</button>
+    </div>
+    <div id="hasil"></div>
+
+<script>
+    function cekCuaca(){
+        const cuaca = parseInt(document.getElementById("cuaca").value);
+        const hasil = document.getElementById("hasil");
+
+        if(isNaN(cuaca)){
+            hasil.innerHTML = "masukkan angka";
+            hasil.style.color = "red";
+        }
+
+
+        let suhu = "";
+        let warna = "";
+
+
+        if (cuaca <10){
+            suhu = "dingin";
+            warna = "blue";
+        } else if(cuaca <30){
+            suhu = "b aja";
+            warna = "yellow"
+        } else if (cuaca <50){
+            suhu = "panas";
+            warna = "red";
+        }
+
+        hasil.innerHTML = `cuaca hari ini: ${cuaca} derajat celcius ${suhu}`;
+        hasil.style.color = warna;
+
+    }
+
+</script>
+</body>
+</html>

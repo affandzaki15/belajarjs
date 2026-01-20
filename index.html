@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar JS</title>
+</head>
+
+<body>
+
+    <p>Belajar JS <sup>2</sup></p>
+    <p><s>Belajar JS <sup>2</sup></s></p>
+    <!-- Variabel -->
+    <script>
+        function greetUser(name) {
+            return "Halo, " + "[" + name + "]" + "!";
+        }
+
+        console.log(greetUser("Affan"));
+        console.log(greetUser("Budi"));
+    </script>
+
+    <script>
+        const multiply = function (a, b) {
+            return a * b;
+
+        }
+
+        console.log(multiply(4, 5));
+    </script>
+
+    <script>
+        const number = [1, 2, 3, 4];
+
+        const tripleNumbers = number.map(function (numbe) {
+            return numbe * 3;
+        });
+
+        console.log(tripleNumbers);
+    </script>
+
+    <script>
+        const nums = [2, 4, 6];
+        const minusOne = nums.map(function (nums) {
+            return nums - 1;
+
+        })
+
+        console.log(minusOne);
+    </script>
+
+    <p id="demo"></p>
+
+    <p id="demo2">Belajar JS</p>
+    <button onclick="ubahTeks()">Click</button>
+
+
+
+    <h2>Counter App</h2>
+    <p id="counter">0</p>
+    <button onclick="tamba()">Tambah</button>
+    <button onclick="kurag()">Kurang</button>
+
+
+    <p id="haloo"> Halo Dunia</p>
+    <button onclick="ubahHalo()">Click</button>
+
+
+
+    <p id="hal">adalah hal terindah</p>
+    <button onclick="ubahHal()">sembunyikan / perlihatkan</button>
+
+
+
+
+    <p id="mathh">Belajar Math</p>
+    <button onclick="ubahh()">Ubah/Awal</button>
+
+
+
+    <script src="conditional.js"></script>
+</body>
+
+</html>
