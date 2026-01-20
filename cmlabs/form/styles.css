@@ -1,0 +1,53 @@
+
+form{
+    display: flex;
+   width: 700px;
+    flex-direction: column;
+    gap:10px;
+    padding: 10px;
+}
+
+.wrapper{
+    justify-items: center;
+}
+
+input, textarea{
+    border: 1px solid #ccc8c8;
+    border-radius: 4px
+}
+
+input{
+    padding: 6px;
+}
+
+textarea{
+    padding: 6px 6px 100px 6px;
+    margin-bottom: 10px;
+}
+
+
+.btn {
+    background-color: #05bcfe;
+    color: #fff;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 20px;
+    
+    /* Tambahkan ini */
+    align-self: center; /* Menghilangkan lebar 100% dan pindah ke tengah */
+    cursor: pointer;
+    
+}
+
+.btn:hover{
+    background-color: #0787b6;
+
+}
+
+.result {
+    width: 700px;        /* Samakan dengan lebar form kamu */
+    margin: 20px auto;   /* auto kiri-kanan agar berada di tengah layar */
+    padding: 15px;       /* Ruang napas di dalam kotak hasil */
+    box-sizing: border-box; /* WAJIB: agar padding tidak menambah lebar 700px tadi */
+
+}
