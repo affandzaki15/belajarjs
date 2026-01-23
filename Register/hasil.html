@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="section">
+        <a class="back" href="index.html">Back</a>
+        <h1>My Account</h1>
+        <div class="wrap-hasil" id="hasil">
+            <p><b>Nama Lengkap: </b><span id="hasil-nama"></span></p>
+            <p><b>Email: </b><span id="hasil-email"></span></p>
+            <p><b>Country: </b><span id="hasil-country"></span></p>
+            <p><b>State: </b><span id="hasil-state"></span></p>
+            <p><b>Phone Number: </b><span id="hasil-phone"></span></p>
+            <p><b>Password: </b><span id="hasil-password"></span></p>
+        </div>
+    </section>
+    <script>
+        const fullname = localStorage.getItem("fullname");
+        const email = localStorage.getItem("email");
+        const country = localStorage.getItem("country");
+        const state = localStorage.getItem("state");
+        const phone = localStorage.getItem("phone");
+        const password = localStorage.getItem("password");
+
+        document.getElementById("hasil-nama").innerText = fullname;
+        document.getElementById("hasil-email").innerText = email;
+        document.getElementById("hasil-country").innerText = country;
+        document.getElementById("hasil-state").innerText = state;
+        document.getElementById("hasil-phone").innerText = phone;
+
+        // ✅ SENSOR PASSWORD
+        if (password) {
+            document.getElementById("hasil-password").innerText =
+                "*".repeat(password.length);
+        }
+    </script>
+
+</body>
+
+</html>

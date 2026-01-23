@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <section class="section">
+        <h1>Register Now</h1>
+        <div class="wrapper">
+            <form id="form" class="form">
+                <div class="name">
+                    <div class="row">
+                        <label>First name</label>
+                        <input type="text" placeholder="Firstname" id="first" />
+                    </div>
+                    <div class="row">
+                        <label>Last name</label>
+                        <input type="text" placeholder="Lastname" id="last" />
+                    </div>
+                </div>
+                <div class="row">
+                    <label>Email</label>
+                    <input type="email" placeholder="E-Mail" id="email" />
+                </div>
+                <div class="name">
+                    <div class="row">
+                        <label>Country of Residence</label>
+                        <select id="country">
+                            <option value="">-- Pilih --</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Bangladesh">Malaysia</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <label>State</label>
+                        <select id="state">
+                            <option value="">-- Pilih --</option>
+                            <option value="Jatim">Jawa Timur</option>
+                            <option value="Kaltim">Kalimantan Timur</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <label>Phone number</label>
+                    <div class="phone">
+                        <select id="numbercountry">
+                            <option value="+62">+62</option>
+                            <option value="+61">+61</option>
+                        </select>
+                        <input type="tel" placeholder="812345678" id="phone" />
+                    </div>
+                </div>
+                <div class="row">
+                    <label>Password</label>
+                    <input type="password" placeholder="Password" id="password" />
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
